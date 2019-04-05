@@ -1,0 +1,1059 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+@font-face {
+  font-family: 'hero_light';
+  src: url("../fonts/hero_light-webfont.eot");
+  src: url("../fonts/hero_light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/hero_light-webfont.woff2") format("woff2"), url("../fonts/hero_light-webfont.woff") format("woff"), url("../fonts/hero_light-webfont.ttf") format("truetype"), url("../fonts/hero_light-webfont.svg#hero_lightlight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'latoregular';
+  src: url("../fonts/lato-regular-webfont.eot");
+  src: url("../fonts/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-regular-webfont.woff2") format("woff2"), url("../fonts/lato-regular-webfont.woff") format("woff"), url("../fonts/lato-regular-webfont.ttf") format("truetype"), url("../fonts/lato-regular-webfont.svg#latoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body, .md body {
+  font-family: 'latoregular', Arial, sans-serif;
+}
+
+.page-content {
+  background-color: #f5f5f5;
+}
+
+small {
+  color: #989898;
+  font-size: 12px;
+}
+
+.statusbar-overlay {
+  background: #000000;
+}
+
+#logo-splash {
+  max-width: 150px;
+  margin: 45px auto 5px;
+  display: block;
+  width: 100%;
+}
+
+.login-screen-content {
+  background-color: #2196f3;
+}
+
+.login-screen-content .login-screen-title {
+  margin: 30px auto;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: 'hero_light';
+}
+
+.md .progressbar,
+.md .progressbar-infinite {
+  top: 200px;
+  height: 12px;
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  display: none;
+}
+
+.progressbar.bg-lightblue,
+.progressbar.color-lightblue,
+.progressbar.theme-lightblue,
+.theme-lightblue .progressbar {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.progressbar.bg-lightblue span,
+.progressbar.color-lightblue span,
+.progressbar.theme-lightblue span,
+.theme-lightblue .progressbar span {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.text-center {
+  text-align: center;
+}
+
+small {
+  color: #ccc;
+  font-size: 10px;
+}
+
+.spacer {
+  height: 60px;
+}
+
+.spacer.xsmall {
+  height: 15px;
+}
+
+.spacer.small {
+  height: 30px;
+}
+
+.spacer.large {
+  height: 120px;
+}
+
+img.responsive {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.landscape-wrapper {
+  overflow: hidden;
+  max-height: 90px;
+  position: relative;
+}
+
+.landscape-wrapper img {
+  display: block;
+  position: relative;
+  top: -50px;
+}
+
+.navbar.nav-trans {
+  background-color: transparent;
+  position: absolute;
+}
+
+.navbar.nav-trans .right:first-child {
+  right: 0px !important;
+}
+
+.navbar.nav-trans:after, .navbar.nav-trans:before {
+  background: transparent !important;
+}
+
+.darken {
+  display: block;
+  background-color: #000;
+  padding: 0;
+}
+
+.darken.blue {
+  background-color: #008fd7;
+}
+
+.darken.orange {
+  background-color: #ffc20e;
+}
+
+.darken.green {
+  background-color: #a2ca28;
+}
+
+.darken img {
+  display: block;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  opacity: .7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'latoregular', Arial;
+  font-weight: 300;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0 0 7.5px;
+  font-weight: 700;
+}
+
+h2.sub {
+  font-family: 'hero_light', Arial;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+h3.sub {
+  font-family: 'hero_light', Arial;
+}
+
+.with-space {
+  padding: 15px;
+}
+
+.md .card {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.14);
+}
+
+.button-links {
+  padding: 3px;
+  margin-top: -30px;
+  z-index: 1;
+  position: relative;
+}
+
+.button-links .card {
+  margin: 4px;
+}
+
+.button-links .button {
+  height: 115px;
+  padding: 0;
+  text-transform: none;
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: 300;
+  border: 0;
+  border-radius: 0;
+  color: #7e8e9a !important;
+}
+
+.button-links .button .material-icons {
+  margin: 15px auto 0;
+  font-size: 38px;
+  color: #2196f3 !important;
+}
+
+.button-links .button p {
+  font-size: 14px;
+}
+
+.button-links .text-color-blue {
+  color: #2196f3;
+}
+
+.button-links .text-color-green {
+  color: #a2ca28;
+}
+
+.button-links .text-color-orange {
+  color: #ffc20e;
+}
+
+.button-links .text-color-pink {
+  color: #ff2d55;
+}
+
+.button-links .text-color-purple {
+  color: #a92ee1;
+}
+
+.button-links .text-color-cyan {
+  color: #27bfbf;
+}
+
+.page-home .islands {
+  margin: 15px auto;
+}
+
+.page-home .islands .img-wrapper {
+  max-height: 14  2px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 500px) {
+  .page-home .islands .img-wrapper {
+    max-height: 260px;
+  }
+}
+
+.page-home .islands > .card-content {
+  padding: 15px 5px 5px;
+}
+
+.page-home .islands > .card-content .card-content {
+  padding: 5px;
+}
+
+.page-home .islands img.responsive {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page-home .islands .swiper-wrapper {
+  padding-bottom: 35px;
+}
+
+.page-home .islands h3 {
+  margin: 5px auto 2px;
+}
+
+.page-home .islands.style-2 {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.page-home .islands.style-2 .img-wrapper {
+  height: 190px;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: none;
+}
+
+.page-home .islands.style-2 .img-wrapper img {
+  display: none;
+}
+
+.page-home .islands.style-2 .button {
+  border-radius: 0;
+  background-color: #fff;
+  color: #333;
+  text-transform: none;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 7px;
+}
+
+.page-home .islands.style-2 .button .material-icons {
+  padding: 0px;
+  position: absolute;
+  right: 3px;
+  font-size: 26px;
+  background-color: #2196f3;
+  color: #fff;
+  margin-top: 5px;
+  border-radius: 50px;
+}
+
+#near-attractions-wrapper .swiper-slide,
+#near-accommodations-wrapper .swiper-slide,
+#near-dining-wrapper .swiper-slide,
+.islands.style-2 .swiper-slide {
+  width: 87%;
+}
+
+#near-attractions-wrapper .img-wrapper,
+#near-accommodations-wrapper .img-wrapper,
+#near-dining-wrapper .img-wrapper,
+.islands.style-2 .img-wrapper {
+  height: 190px;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: none;
+}
+
+#near-attractions-wrapper .img-wrapper img,
+#near-accommodations-wrapper .img-wrapper img,
+#near-dining-wrapper .img-wrapper img,
+.islands.style-2 .img-wrapper img {
+  display: none;
+}
+
+#near-attractions-wrapper .button,
+#near-accommodations-wrapper .button,
+#near-dining-wrapper .button,
+.islands.style-2 .button {
+  border-radius: 0;
+  background-color: #fff;
+  color: #333;
+  text-transform: none;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 7px;
+}
+
+#near-attractions-wrapper .button .material-icons,
+#near-accommodations-wrapper .button .material-icons,
+#near-dining-wrapper .button .material-icons,
+.islands.style-2 .button .material-icons {
+  padding: 0px;
+  position: absolute;
+  right: 3px;
+  font-size: 26px;
+  background-color: #2196f3;
+  color: #fff;
+  margin-top: 5px;
+  border-radius: 50px;
+}
+
+.islands.style-2 {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#near-attractions-wrapper .nearest,
+#near-accommodations-wrapper .nearest,
+#near-dining-wrapper .nearest {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+#near-attractions-wrapper .button,
+#near-accommodations-wrapper .button,
+#near-dining-wrapper .button {
+  margin-top: 4px;
+}
+
+#near-attractions-wrapper .button .material-icons,
+#near-accommodations-wrapper .button .material-icons,
+#near-dining-wrapper .button .material-icons {
+  margin-top: -4px;
+  right: 7px;
+}
+
+#content {
+  margin-top: 15px;
+}
+
+#location {
+  color: #999;
+}
+
+.banner-wrapper {
+  position: relative;
+  overflow: hidden;
+  max-height: 240px;
+}
+
+.banner-wrapper.small {
+  max-height: 230px;
+}
+
+.banner-wrapper img.responsive {
+  height: 260px;
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .banner-wrapper img.responsive {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.banner-wrapper img.responsive.landscape {
+  height: auto;
+  width: 100%;
+}
+
+.banner-wrapper .banner-inner {
+  position: absolute;
+  top: 30px;
+  display: block;
+  left: 0px;
+  text-align: center;
+  right: 0px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.banner-wrapper .banner-inner h1 {
+  color: #fff;
+  margin: 30px 0 0;
+  font-size: 32px;
+}
+
+.banner-wrapper .banner-inner h3 {
+  color: #fff;
+  margin: 0;
+}
+
+.banner-wrapper .button {
+  border-radius: 50px;
+  display: inline-block;
+  padding: 0px 30px;
+  color: #fff;
+  font-weight: 300;
+  height: auto;
+  letter-spacing: 1.4px;
+  margin-top: 15px;
+}
+
+.map-canvas-header {
+  height: 260px;
+}
+
+.page-romblon .label-photo {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.page-romblon .tabbar {
+  top: -1px !important;
+}
+
+.main-tab {
+  background-color: #2196f3;
+}
+
+.main-tab .tab-link {
+  color: #fff !important;
+  text-transform: none;
+}
+
+.main-tab .tab-link.active {
+  background-color: #049ade;
+}
+
+.main-tab .button {
+  margin-left: 0;
+}
+
+.accordion-item-opened > .accordion-item-content {
+  padding-bottom: 30px;
+}
+
+.accordion-list .accordion-item {
+  border-bottom: 1px solid #eee;
+}
+
+.accordion-list .accordion-item:last-child {
+  border-bottom: 0;
+}
+
+.accordion-list .accordion-item ol {
+  padding-left: 15px;
+}
+
+ol.numbered-small li {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.md .data-table tbody td {
+  border-top: 1px solid #eee;
+}
+
+.side-panel .side-logo {
+  width: 90px;
+  margin: 0 auto;
+  display: block;
+}
+
+.side-panel h3 {
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.side-panel .menu-links ul {
+  list-style: none;
+  padding: 5px 15px;
+  border-top: 1px solid #f7f7f7;
+  margin: 0;
+}
+
+.side-panel .menu-links ul li a {
+  display: block;
+  padding: 9px 7px;
+  color: #212121;
+}
+
+.side-panel .menu-links ul .material-icons {
+  color: #2196f3;
+  position: relative;
+  top: 5px;
+  padding-right: 16px;
+}
+
+.md .tabbar a.link,
+.md .tabbar a.tab-link,
+.md .tabbar-labels a.link,
+.md .tabbar-labels a.tab-link {
+  text-transform: none;
+}
+
+.md .page-content .searchbar {
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.md .page-content .searchbar .material-icons {
+  position: absolute;
+  top: 7px;
+  padding: 7px;
+}
+
+.hidden {
+  display: none;
+}
+
+.searchbar-hide-on-search {
+  padding: 15px 7px 0;
+}
+
+.searchbar-result {
+  margin-top: 15px !important;
+}
+
+.searchbar-result .item-content {
+  min-height: 48px;
+  padding-left: 0 !important;
+}
+
+.searchbar-result .card {
+  width: 100%;
+  margin: 3px 6px;
+}
+
+.searchbar-result .card .card-content {
+  padding: 6px;
+}
+
+.searchbar-result .card .loader {
+  margin-left: -6px;
+  margin-right: -6px !important;
+  margin-top: -6px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../images/loading.svg");
+  background-color: #eee;
+}
+
+.searchbar-result .card .img-wrapper {
+  overflow: hidden;
+  position: relative;
+  min-height: 160px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+  margin-right: 6px;
+}
+
+.searchbar-result .card h3 {
+  font-size: 13px;
+  margin: 8px 32px 0 0;
+  line-height: 1.2;
+  color: #2196f3;
+}
+
+.searchbar-result .card .municipality {
+  color: #999;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.searchbar-result .card .tags {
+  margin: 7px 0 0;
+  position: relative;
+  bottom: 0;
+}
+
+.searchbar-result .card .tags .chip {
+  font-size: 9px;
+  line-height: 1;
+  height: 18px;
+  color: #777;
+  padding: 0 8px;
+  background: rgba(83, 151, 206, 0.1);
+}
+
+.searchbar-result .card .tags .chip-label {
+  overflow: visible;
+}
+
+.page-attractions-details .photos .card,
+.page-accommodations-details .photos .card,
+.page-dining-details .photos .card {
+  margin: 4px;
+}
+
+.page-attractions-details .photos .card-content,
+.page-accommodations-details .photos .card-content,
+.page-dining-details .photos .card-content {
+  padding: 4px;
+}
+
+#status-desc {
+  position: relative;
+  opacity: .9;
+  top: 160px;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+#status-desc h3 {
+  margin: 0;
+}
+
+.map-container {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+}
+
+#map-canvas {
+  height: 100% important;
+  width: 100%;
+}
+
+#has-update {
+  display: none;
+  text-align: center;
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#has-update p {
+  color: #f7f100;
+}
+
+#has-update .button {
+  display: inline-block;
+  margin: 0 4px;
+  min-width: 130px;
+}
+
+#has-update .button.color-yellow {
+  color: #988a0e !important;
+}
+
+#has-update .button.color-white {
+  color: #fff !important;
+}
+
+.page-attractions-details #title,
+.page-accommodations-details #title,
+.page-dining-details #title {
+  margin-bottom: 0;
+}
+
+.page-attractions-details #island,
+.page-accommodations-details #island,
+.page-dining-details #island {
+  margin-bottom: 15px;
+  color: #999;
+}
+
+.page-attractions-details #info label,
+.page-accommodations-details #info label,
+.page-dining-details #info label {
+  font-weight: 700;
+  margin-top: 15px;
+  display: block;
+}
+
+.page-attractions-details #info p,
+.page-accommodations-details #info p,
+.page-dining-details #info p {
+  margin: 0;
+}
+
+#loader {
+  position: relative;
+  top: 160px;
+}
+
+.page-about .logo {
+  max-width: 190px;
+  margin: 0 auto;
+  display: block;
+}
+
+.page-about .social .svg-inline--fa {
+  margin: 0 7px 6px 0;
+  color: #2196f3;
+  position: relative;
+  top: 12px;
+}
+
+.page-about .social a {
+  color: #212121;
+  display: inline-block;
+}
+
+.sea-transport-form .item-input-wrap {
+  border-bottom: 1px solid #ccc;
+}
+
+.sea-transport-form ul:before,
+.sea-transport-form ul:after {
+  content: none !important;
+}
+
+#schedule table {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+#schedule table:first-child {
+  border-top: 1px solid #ddd;
+}
+
+#schedule td {
+  width: 50%;
+  padding: 3px;
+}
+
+#schedule td:first-child {
+  font-weight: 700;
+}
+
+#schedule td hr {
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+#schedule td h3 {
+  margin: 0;
+  color: #2196f3;
+}
+
+#schedule .card {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#reset-container {
+  margin: 15px 0;
+}
+
+.nearest .img-wrapper {
+  max-height: 150px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 500px) {
+  .nearest .img-wrapper {
+    max-height: 260px;
+  }
+}
+
+.nearest .swiper-container {
+  padding-bottom: 15px;
+}
+
+.nearest .swiper-container-horizontal > .swiper-pagination-bullets,
+.nearest .swiper-pagination-custom,
+.nearest .swiper-pagination-fraction {
+  bottom: -2px;
+}
+
+.nearest h3 {
+  margin: 7px auto;
+}
+
+.nearest .material-icons {
+  top: 7px;
+  position: relative;
+}
+
+.nearest .no-location {
+  color: #ccc;
+  padding: 0 15px;
+}
+
+.nearest .no-image {
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("../images/loading.svg");
+  background-color: #eee;
+}
+
+.offline {
+  font-weight: bold;
+  color: #d21a1a;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #ffecec;
+}
+
+.toast.toast-bottom.modal-in {
+  opacity: .9;
+}
+
+.list li.accordion-item ul.bulleted {
+  list-style: disc;
+  padding-left: 45px;
+}
+
+.distance-meters {
+  text-align: center;
+  color: #999;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.distance-meters .material-icons {
+  font-size: 16px;
+  top: 3px;
+}
+
+.searchbar-result ul {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.searchbar-result ul .tags {
+  display: none;
+}
+
+.searchbar-result ul .municipality {
+  line-height: 1.2;
+}
+
+.searchbar-result ul .item-content {
+  width: 50%;
+  float: left;
+  margin-bottom: 3px;
+}
+
+.searchbar-result ul .col-35,
+.searchbar-result ul .col-65 {
+  width: 100% !important;
+}
+
+.searchbar-result ul .img-wrapper {
+  min-height: 160px;
+  margin-left: -6px;
+  margin-right: -6px !important;
+  margin-top: -6px;
+}
+
+.searchbar-result ul .card {
+  margin: 3px 4px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.searchbar-result ul .card h3 {
+  margin: 8px 0;
+}
+
+.searchbar-result ul .card .distance {
+  font-size: 10px;
+  color: #fff;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  padding: 2px 5px;
+  top: 3px;
+  right: 3px;
+}
+
+.searchbar-result ul .card .distance .material-icons, .searchbar-result ul .card .distance:empty {
+  display: none;
+}
+
+.distance .material-icons {
+  position: relative;
+  top: 4px;
+  font-size: 18px;
+}
+
+.photo-browser-container .card {
+  margin: 8px 0 !important;
+}
+
+.md .timeline {
+  margin: 24px 0 0;
+  padding: 0 16px;
+}
+
+.md .timeline .timeline-item-content {
+  padding-bottom: 20px;
+  width: 100%;
+  margin: 0;
+}
+
+.timeline-item-divider {
+  background: #2196f3;
+}
+
+.timeline-item-date {
+  font-weight: 700;
+  width: 65px;
+}
+
+.md .list .item-inner:after {
+  content: none;
+}
+
+.md .card-header {
+  font-weight: 700;
+}
+
+.tours .svg-inline--fa {
+  font-size: 18px;
+  color: #2196f3;
+  margin: 0 16px 0 6px;
+  width: 25px !important;
+  text-align: left;
+  float: left;
+  top: 2px;
+  position: relative;
+}
+
+.tours .operator-item {
+  padding: 10px 0;
+}
+
+.tours a.external {
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.tours span {
+  display: inline-block;
+}
+
+.directory-list .md .card-content-padding > .list {
+  margin-top: 0;
+}
+
+.directory-list .svg-inline--fa {
+  font-size: 18px;
+  color: #2196f3;
+  margin: 0 16px 0 6px;
+  width: 25px !important;
+  text-align: left;
+  float: left;
+  top: 2px;
+  position: relative;
+}
+
+.directory-list .directory-title {
+  margin: 21px 0 7px;
+}
+
+.directory-list .directory-title:first-child {
+  margin-top: 7px;
+}
+
+.directory-list .directory-item {
+  padding: 7px 0;
+}
+
+@media (max-width: 500px) {
+  #logo-splash {
+    margin-top: 120px;
+  }
+}
+
+@media (min-width: 501px) {
+  .searchbar-result .img-wrapper {
+    min-height: 260px !important;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

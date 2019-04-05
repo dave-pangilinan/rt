@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline' *; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval' *; img-src 'self' data: *" />
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>Romblon Islands Guide</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.md.min.css">
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script type="text/javascript" src="js/fontawesome-all.js"></script>
+    <script type="text/javascript" src="js/masonry.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBLS6mSEQmtUW22Ul20SU-5xRHe4rZn-Zs"></script>
+
+</head>
+
+<body class="theme-lightblue">
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-cover side-panel">
+        <div class="content-block with-space">
+            <a class="panel-close" href="/home/"><img class="side-logo" src="images/logo.png" alt="Romblon"></a>
+            <h3 class="sub text-center">Romblon Islands Guide</h3>
+        </div>
+        <div class="content-block menu-links">
+            <ul>
+                <li><a class="panel-close" href="/home/"><i class="material-icons">home</i>Home</a></li>
+                <li><a class="panel-close" href="/romblon/"><i class="material-icons">directions_boat</i>Romblon Islands</a></li>
+                <li><a class="panel-close" href="/events/"><i class="material-icons">event</i>Events</a></li>
+                <li><a class="panel-close" href="/how-to-get-there/"><i class="material-icons">directions</i>How to get there</a></li>
+                <li><a class="panel-close" href="/quick-facts-and-tips/"><i class="material-icons">lightbulb_outline</i>Quick Facts &amp; Tips</a></li>
+                <li><a class="panel-close" href="/emergency-directory/"><i class="material-icons">contact_phone</i>Emergency directory</a></li>
+                <li><a class="panel-close" href="/help/"><i class="material-icons">assistant</i>Help</a></li>
+                <li><a class="panel-close" href="/about/"><i class="material-icons">info_outline</i>About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="main" class="page no-swipeback">
+					<div class="page-content login-screen-content">
+	                    <img id="logo-splash" src="images/logo.png">
+	                    <div class="login-screen-title">Romblon Islands Guide</div>
+                        <div id="has-update">
+                            <p>Update is available!</p>
+                            <a href="#" class="button button-round button-fill color-yellow update">Update</a>
+                            <a href="#" class="button button-round button-outline color-white skip">Skip</a>
+                        </div>
+
+                        <div data-progress="0" class="progressbar"></div>
+                        <div id="loader" class="block text-align-center">
+                            <div class="preloader color-white">
+                                <span class="preloader-inner">
+                                    <span class="preloader-inner-gap"></span>
+                                    <span class="preloader-inner-left">
+                                        <span class="preloader-inner-half-circle"></span>
+                                    </span>
+                                    <span class="preloader-inner-right">
+                                        <span class="preloader-inner-half-circle"></span>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="status-desc"></div>
+	                </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- <script src="http://192.168.1.10:8080/target/target-script-min.js#anonymous"></script> -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/framework7-config.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/pages.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>
