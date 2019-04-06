@@ -941,7 +941,7 @@ ol.numbered-small li {
   margin: 8px 0;
 }
 
-.searchbar-result ul .card .distance {
+.searchbar-result ul .card .distance-wrapper {
   font-size: 10px;
   color: #fff;
   position: absolute;
@@ -952,7 +952,7 @@ ol.numbered-small li {
   right: 3px;
 }
 
-.searchbar-result ul .card .distance .material-icons, .searchbar-result ul .card .distance:empty {
+.searchbar-result ul .card .distance-wrapper .material-icons, .searchbar-result ul .card .distance-wrapper:empty {
   display: none;
 }
 
