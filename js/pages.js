@@ -727,6 +727,10 @@ var TablasIslandAttractions = function() {
 
     displayDistanceInGrid('att-id');
     convertListToGrid();
+
+    $$('.sort-by .button').on('click', function () {
+        createSortBy();
+    });
 };
 
 var TablasIslandAttractionsDetails = function(page) {

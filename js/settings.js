@@ -42,7 +42,7 @@ var TEMPLATE = {
                             '<div class="card-content">' +
                                 '<a href="/tablas-island/attractions/details/?id={{att_id}}" class="row no-gap">' +
                                     '<div class="col-35">' +
-                                        '<div class="loader"><div class="img-wrapper lazy" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} data-background="{{this}}" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
+                                        '<div class="loader"><div class="img-wrapper" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} style="background-image: url({{this}})" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
@@ -90,7 +90,7 @@ var TEMPLATE = {
                             '<div class="card-content">' +
                                 '<a href="/tablas-island/accommodations/details/?id={{acc_id}}" class="row no-gap">' +
                                     '<div class="col-35">' +
-                                        '<div class="loader"><div class="img-wrapper lazy" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} data-background="{{this}}" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
+                                        '<div class="loader"><div class="img-wrapper" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} style="background-image: url({{this}})" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
@@ -138,7 +138,7 @@ var TEMPLATE = {
                             '<div class="card-content">' +
                                 '<a href="/tablas-island/dining/details/?id={{din_id}}" class="row no-gap">' +
                                     '<div class="col-35">' +
-                                        '<div class="loader"><div class="img-wrapper lazy" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} data-background="{{this}}" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
+                                        '<div class="loader"><div class="img-wrapper" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} style="background-image: url({{this}})" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
@@ -189,7 +189,7 @@ var TEMPLATE = {
                             '<div class="card-content">' +
                                 '<a href="/sibuyan-island/attractions/details/?id={{att_id}}" class="row no-gap">' +
                                     '<div class="col-35">' +
-                                        '<div class="loader"><div class="img-wrapper lazy" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} data-background="{{this}}" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
+                                        '<div class="loader"><div class="img-wrapper" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} style="background-image: url({{this}})" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
@@ -237,7 +237,7 @@ var TEMPLATE = {
                             '<div class="card-content">' +
                                 '<a href="/sibuyan-island/accommodations/details/?id={{acc_id}}" class="row no-gap">' +
                                     '<div class="col-35">' +
-                                        '<div class="loader"><div class="img-wrapper lazy" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} data-background="{{this}}" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
+                                        '<div class="loader"><div class="img-wrapper" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} style="background-image: url({{this}})" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
@@ -285,7 +285,7 @@ var TEMPLATE = {
                             '<div class="card-content">' +
                                 '<a href="/sibuyan-island/dining/details/?id={{din_id}}" class="row no-gap">' +
                                     '<div class="col-35">' +
-                                        '<div class="loader"><div class="img-wrapper lazy" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} data-background="{{this}}" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
+                                        '<div class="loader"><div class="img-wrapper" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} style="background-image: url({{this}})" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
@@ -335,7 +335,7 @@ var TEMPLATE = {
                             '<div class="card-content">' +
                                 '<a href="/romblon-island/attractions/details/?id={{att_id}}" class="row no-gap">' +
                                     '<div class="col-35">' +
-                                        '<div class="loader"><div class="img-wrapper lazy" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} data-background="{{this}}" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
+                                        '<div class="loader"><div class="img-wrapper" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} style="background-image: url({{this}})" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
@@ -383,7 +383,7 @@ var TEMPLATE = {
                             '<div class="card-content">' +
                                 '<a href="/romblon-island/accommodations/details/?id={{acc_id}}" class="row no-gap">' +
                                     '<div class="col-35">' +
-                                        '<div class="loader"><div class="img-wrapper lazy" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} data-background="{{this}}" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
+                                        '<div class="loader"><div class="img-wrapper" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} style="background-image: url({{this}})" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
@@ -431,7 +431,7 @@ var TEMPLATE = {
                             '<div class="card-content">' +
                                 '<a href="/romblon-island/dining/details/?id={{din_id}}" class="row no-gap">' +
                                     '<div class="col-35">' +
-                                        '<div class="loader"><div class="img-wrapper lazy" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} data-background="{{this}}" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
+                                        '<div class="loader"><div class="img-wrapper" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} style="background-image: url({{this}})" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
@@ -481,7 +481,7 @@ var TEMPLATE = {
                             '<div class="card-content">' +
                                 '<a href="/carabao-island/attractions/details/?id={{att_id}}" class="row no-gap">' +
                                     '<div class="col-35">' +
-                                        '<div class="loader"><div class="img-wrapper lazy" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} data-background="{{this}}" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
+                                        '<div class="loader"><div class="img-wrapper" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} style="background-image: url({{this}})" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
@@ -529,7 +529,7 @@ var TEMPLATE = {
                             '<div class="card-content">' +
                                 '<a href="/carabao-island/accommodations/details/?id={{acc_id}}" class="row no-gap">' +
                                     '<div class="col-35">' +
-                                        '<div class="loader"><div class="img-wrapper lazy" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} data-background="{{this}}" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
+                                        '<div class="loader"><div class="img-wrapper" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} style="background-image: url({{this}})" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
@@ -577,7 +577,7 @@ var TEMPLATE = {
                             '<div class="card-content">' +
                                 '<a href="/carabao-island/dining/details/?id={{din_id}}" class="row no-gap">' +
                                     '<div class="col-35">' +
-                                        '<div class="loader"><div class="img-wrapper lazy" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} data-background="{{this}}" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
+                                        '<div class="loader"><div class="img-wrapper" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} style="background-image: url({{this}})" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
@@ -627,7 +627,7 @@ var TEMPLATE = {
                             '<div class="card-content">' +
                                 '<a href="/tresislas-island/attractions/details/?id={{att_id}}" class="row no-gap">' +
                                     '<div class="col-35">' +
-                                        '<div class="loader"><div class="img-wrapper lazy" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} data-background="{{this}}" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
+                                        '<div class="loader"><div class="img-wrapper" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} style="background-image: url({{this}})" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
@@ -675,7 +675,7 @@ var TEMPLATE = {
                             '<div class="card-content">' +
                                 '<a href="/tresislas-island/accommodations/details/?id={{acc_id}}" class="row no-gap">' +
                                     '<div class="col-35">' +
-                                        '<div class="loader"><div class="img-wrapper lazy" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} data-background="{{this}}" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
+                                        '<div class="loader"><div class="img-wrapper" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} style="background-image: url({{this}})" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
@@ -723,7 +723,7 @@ var TEMPLATE = {
                             '<div class="card-content">' +
                                 '<a href="/tresislas-island/dining/details/?id={{din_id}}" class="row no-gap">' +
                                     '<div class="col-35">' +
-                                        '<div class="loader"><div class="img-wrapper lazy" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} data-background="{{this}}" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
+                                        '<div class="loader"><div class="img-wrapper" {{#if local_photos.length}}{{#each local_photos}}{{#if @first}} style="background-image: url({{this}})" {{/if}}{{/each}}{{else}} style="background-image: url(../images/no-image.jpg)"{{/if}}></div></div>' +
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +

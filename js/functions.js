@@ -1,5 +1,6 @@
 var g_downloadedPhotosCount = 0;
 var g_totalPhotos = 0;
+var g_gridLayout;
 
 /*****************************************************
  Display console log on debug mode.
@@ -621,7 +622,7 @@ var displayDirections = function(map, destination, target = '#location') {
             var distance_meters = getDistance(start, destination);
             log(destination.lat);
             distance_meters = (distance_meters / 1000).toFixed(2);
-            $$(target).append('<div class="distance"><i class="material-icons">place</i> ' + distance_meters + 'km away</div>');
+            $$(target).append('<div class="distance"><i class="material-icons">place</i> <span>' + distance_meters + '</span>km away</div>');
 
         }, function(error) {
             log('geolocation not available. directions will not be displayed.');
@@ -694,21 +695,24 @@ var deleteFile = function(file) {
 }
 
 /*****************************************************
- Convert search result list to masonry grid layout.
+ Convert search result list to grid layout.
  *****************************************************/
 var convertListToGrid = function() {
-    var msnry = new Masonry('.searchbar-result > ul', {
-        itemSelector: '.item-content:not(.hidden-by-searchbar)',
-        columnWidth: '.item-content:not(.hidden-by-searchbar)',
-        percentPosition: true
+    g_gridLayout = new Isotope('.searchbar-result > ul', {
+        itemSelector: '.item-content',
+        getSortData: {
+            name: 'h3',
+            distance: '.distance span parseFloat',
+            rating: '.municipality'
+        },
+        sortBy: 'name'
     });
 
     $$('.searchbar').on('searchbar:search', function(e) {
-        msnry.layout();
+        g_gridLayout.arrange();
     });
-    msnry.layout();
+    g_gridLayout.arrange();
 }
-
 
 /*****************************************************
  Display the distance in grid list.
@@ -735,5 +739,83 @@ var displayDistanceInGrid = function(idSelector) {
         });
     } else {
         $$('.item-content .card .distance-wrapper').hide();
+    }
+}
+
+/*****************************************************
+ Create sort by functionality for grid lists.
+ *****************************************************/
+var createSortBy = function(listType) {
+
+    // Default sorts.
+    let options = [{
+            text: 'Sort A-Z',
+            onClick: function () {
+                sortByName();
+            }
+        },
+        {
+            text: 'Sort Z-A',
+            onClick: function () {
+                sortByName(false);
+            }
+        },
+        {
+            text: 'Sort by rating (asc)',
+            onClick: function () {
+                sortByRating();
+            }
+        },
+        {
+            text: 'Sort by rating (desc)',
+            onClick: function () {
+                sortByRating(false);
+            }
+        }];
+
+    // Show sort by distance only if distance is defined.
+    if ($$('.searchbar-result .distance').length) {
+        options.push({
+            text: 'Sort by distance (asc)',
+            onClick: function () {
+                sortByDistance();
+            }
+        });
+        options.push({
+            text: 'Sort by distance (desc)',
+            onClick: function () {
+                sortByDistance(false);
+            }
+        });
+    }
+    
+    // Show when sort by button is clicked.
+    let sortby = app.actions.create({
+        buttons: options
+    });
+    sortby.open();
+
+    function sortByName(asc = true) {
+        g_gridLayout.arrange({
+            sortAscending: asc,
+            sortBy: 'name'
+        });
+        g_gridLayout.arrange();
+    }
+
+    function sortByDistance(asc = true) {
+        g_gridLayout.arrange({
+            sortAscending: asc,
+            sortBy: 'distance'
+        });
+        g_gridLayout.arrange();
+    }
+
+    function sortByRating(asc = true) {
+        g_gridLayout.arrange({
+            sortAscending: asc,
+            sortBy: 'rating'
+        });
+        g_gridLayout.arrange();
     }
 }

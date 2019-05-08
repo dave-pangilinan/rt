@@ -560,6 +560,22 @@ ol.numbered-small li {
     display: none;
 }
 
+.top-bar {
+    position: relative;
+    .sort-by {
+        position: absolute;
+        top: 10px;
+        right: 8px;
+        .button {
+            width: 26px;
+            min-width: 10px;
+            border-radius: 7px;
+            font-size: 20px;
+            color: #999;
+        }
+    }
+}
+
 .searchbar-hide-on-search {
     padding: 15px 7px 0; 
 }
@@ -977,6 +993,9 @@ ol.numbered-small li {
     }
 }
 
+.item-content {
+    transition: background 0.4s, box-shadow 0.4s;
+}
 
 @media (max-width: 500px) {
     #logo-splash {
@@ -991,3 +1010,4 @@ ol.numbered-small li {
         }
     }
 }
+
