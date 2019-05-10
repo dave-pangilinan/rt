@@ -622,7 +622,7 @@ var displayDirections = function(map, destination, target = '#location') {
             var distance_meters = getDistance(start, destination);
             log(destination.lat);
             distance_meters = (distance_meters / 1000).toFixed(2);
-            $$(target).append('<div class="distance"><i class="material-icons">place</i> <span>' + distance_meters + '</span>km away</div>');
+            $$(target).append('<div class="distance"><i class="material-icons">place</i> <span class="distance-value">' + distance_meters + '</span>km away</div>');
 
         }, function(error) {
             log('geolocation not available. directions will not be displayed.');
@@ -702,7 +702,7 @@ var convertListToGrid = function() {
         itemSelector: '.item-content',
         getSortData: {
             name: 'h3',
-            distance: '.distance span parseFloat',
+            distance: '.distance-value parseFloat',
             rating: '.municipality'
         },
         sortBy: 'name'
@@ -804,6 +804,8 @@ var createSortBy = function(listType) {
     }
 
     function sortByDistance(asc = true) {
+        log('sorting by distance')
+        g_gridLayout.updateSortData();
         g_gridLayout.arrange({
             sortAscending: asc,
             sortBy: 'distance'
