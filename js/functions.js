@@ -698,6 +698,7 @@ var deleteFile = function(file) {
  Convert search result list to grid layout.
  *****************************************************/
 var convertListToGrid = function() {
+    var qsRegex;
     g_gridLayout = new Isotope('.searchbar-result > ul', {
         itemSelector: '.item-content',
         getSortData: {
@@ -705,12 +706,40 @@ var convertListToGrid = function() {
             distance: '.distance-value parseFloat',
             rating: '.municipality'
         },
-        sortBy: 'name'
+        sortBy: 'name',
+        filter: function() {
+            var $this = $$(this);
+            console.log($this) //in progress
+            return qsRegex ? $$(this).text().match(qsRegex) : true;
+        }
     });
 
-    $$('.searchbar').on('searchbar:search', function(e) {
+    // use value of search field to filter
+    var $quicksearch = $$('.searchbar input').keyup( debounce( function() {
+        log('key up')
+        qsRegex = new RegExp( $quicksearch.val(), 'gi' );
         g_gridLayout.arrange();
-    });
+    }, 200 ) );
+
+    // debounce so filtering doesn't happen every millisecond
+    function debounce( fn, threshold ) {
+        var timeout;
+        threshold = threshold || 100;
+        return function debounced() {
+        clearTimeout( timeout );
+        var args = arguments;
+        var _this = this;
+        function delayed() {
+            fn.apply( _this, args );
+        }
+        timeout = setTimeout( delayed, threshold );
+        };
+    }
+
+    // $$('.searchbar').on('searchbar:search', function(e) {
+    //     g_gridLayout.arrange();
+    //     log('searching')
+    // });
     g_gridLayout.arrange();
 }
 
