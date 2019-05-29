@@ -707,19 +707,27 @@ var convertListToGrid = function() {
             rating: '.municipality'
         },
         sortBy: 'name',
-        filter: function() {
-            var $this = $$(this);
-            console.log($this) //in progress
-            return qsRegex ? $$(this).text().match(qsRegex) : true;
+        filter: function(itemElem) {
+            return qsRegex ? $$(itemElem).find('h3').text().match(qsRegex) : true;
         }
     });
 
     // use value of search field to filter
     var $quicksearch = $$('.searchbar input').keyup( debounce( function() {
-        log('key up')
-        qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+        filterList($quicksearch.val());
+    }, 200));
+
+    // Clear filter.
+    $$('.input-clear-button').click(function(e) {
+        filterList('');
+    });
+
+    // Perform filtering.
+    function filterList(value) {
+        qsRegex = new RegExp(value, 'gi');
         g_gridLayout.arrange();
-    }, 200 ) );
+        $$('.searchbar-hide-on-search span').text(g_gridLayout.filteredItems.length);
+    }
 
     // debounce so filtering doesn't happen every millisecond
     function debounce( fn, threshold ) {
