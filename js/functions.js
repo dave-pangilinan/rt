@@ -744,11 +744,12 @@ var convertListToGrid = function() {
         };
     }
 
-    // $$('.searchbar').on('searchbar:search', function(e) {
-    //     g_gridLayout.arrange();
-    //     log('searching')
-    // });
     g_gridLayout.arrange();
+
+    // Add sort by functionality.
+    $$('.sort-by .button').on('click', function () {
+        createSortBy();
+    });
 }
 
 /*****************************************************
