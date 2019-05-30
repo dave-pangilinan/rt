@@ -707,6 +707,7 @@ var convertListToGrid = function() {
             rating: '.municipality'
         },
         sortBy: 'name',
+        transitionDuration: 0,
         filter: function(itemElem) {
             return qsRegex ? $$(itemElem).find('h3').text().match(qsRegex) : true;
         }
