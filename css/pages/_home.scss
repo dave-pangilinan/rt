@@ -1,0 +1,145 @@
+
+.page-home {
+    .islands {
+        margin: 15px auto;
+        .img-wrapper {
+            max-height: 14  2px;
+            overflow: hidden;
+            @media screen and (min-width: $break-medium) {
+                max-height: 260px;
+            }
+        }
+        & > .card-content {
+            padding: 15px 5px 5px;
+            .card-content {
+                padding: 0;
+            }
+        }
+        img.responsive {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .swiper-wrapper {
+            padding-bottom: 35px;
+        }
+        h3 {
+            margin: 5px auto 2px;
+            position: absolute;
+            bottom: 2px;
+            color: #fff;
+            display: block;
+            padding: 2px 10px;
+            font-weight: 400;
+            font-family: 'latoregular';
+            font-size: 20px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+        }
+        
+        &.style-2 {
+            background-color: transparent;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+
+            .img-wrapper {
+                height: 190px;
+                overflow: hidden;
+                background-size: cover;
+                background-repeat: none;
+                border-radius: 10px;
+                img {
+                    display: none;
+                }
+            }
+
+            .button {
+                border-radius: 0;
+                background-color: #fff;
+                color: #333;
+                text-transform: none;
+                font-weight: 700;
+                font-size: 16px;
+                margin-top: 7px;
+                .material-icons {
+                    padding: 0px;
+                    position: absolute;
+                    right: 3px;
+                    font-size: 26px;
+                    background-color: #2196f3;
+                    color: #fff;
+                    margin-top: 5px;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
+}
+
+#near-attractions-wrapper,
+#near-accommodations-wrapper,
+#near-dining-wrapper,
+.islands.style-2 {
+    .swiper-slide {
+        width: 87%;
+    }
+    
+    .img-wrapper {
+        height: 190px;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: none;
+        img {
+            display: none;
+        }
+    }
+
+    .button {
+        border-radius: 0;
+        background-color: #fff;
+        color: #333;
+        text-transform: none;
+        font-weight: 700;
+        font-size: 16px;
+        margin-top: 7px;
+        .material-icons {
+            padding: 0px;
+            position: absolute;
+            right: 3px;
+            font-size: 26px;
+            background-color: #2196f3;
+            color: #fff;
+            margin-top: 5px;
+            border-radius: 50px;
+        }
+    }
+}
+
+
+.islands.style-2 {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#near-attractions-wrapper,
+#near-accommodations-wrapper,
+#near-dining-wrapper {
+    .nearest {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .button {
+        margin-top: 4px;
+        .material-icons {
+            margin-top: -4px;
+            right: 7px;
+        }
+    }
+}
+
+#content {
+    margin-top: 15px;
+}
+
+#location {
+    color: #999;
+}

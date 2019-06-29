@@ -1,0 +1,181 @@
+
+.searchbar-hide-on-search {
+    padding: 15px 7px 0; 
+}
+.searchbar-result {
+    margin-top: 15px !important;
+    .item-content {
+        min-height: 48px;
+        padding-left: 0 !important;
+    }
+    .card {
+        width: 100%;
+        margin: 3px 6px;
+        .card-content {
+            padding: 6px;
+        }
+        .loader {
+            margin-left: -6px;
+            margin-right: -6px !important;
+            margin-top: -6px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url('../images/loading.svg');    
+            background-color: #eee;        
+        }
+        .img-wrapper {
+            overflow: hidden;
+            position: relative;
+            min-height: 160px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: block;
+            margin-right: 6px;
+        }
+        h3 {
+            font-size: 13px;
+            margin: 8px 32px 0 0;
+            line-height: 1.2;
+            color: $blue;
+        }
+        .municipality {
+            color: #999;
+            font-size: 12px;
+            text-transform: capitalize;
+        }
+        .tags {
+            margin: 7px 0 0;
+            position: relative;
+            bottom: 0;
+            .chip {
+                font-size: 9px;
+                line-height: 1;
+                height: 18px;
+                color: #777;
+                padding: 0 8px;
+                background: rgba(83, 151, 206, 0.1);
+            }
+            .chip-label {
+                overflow: visible;
+            }
+        }        
+    }
+}
+
+.page-attractions-details,
+.page-accommodations-details,
+.page-dining-details {
+    .photos {
+        .card {
+            margin: 4px;
+        }
+        .card-content {
+            padding: 4px;
+        }
+    }
+}
+
+
+.page-attractions-details,
+.page-accommodations-details,
+.page-dining-details {
+    #title {
+        margin-bottom: 0;
+    }
+    #island {
+        margin-bottom: 15px;
+        color: #999;
+    }
+    #info {
+        label {
+            font-weight: 700;
+            margin-top: 15px;
+            display: block;
+        }
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.page-about {
+    .logo {
+        max-width: 190px;
+        margin: 0 auto;
+        display: block;
+    }
+    .social {
+        .svg-inline--fa {
+            margin: 0 7px 6px 0;
+            color: #2196f3;
+            position: relative;
+            top: 12px;
+        }
+        a {
+            color: #212121;
+            display: inline-block;
+        }
+    }
+}
+
+
+.searchbar-result {
+    ul {
+        margin-left: 4px;
+        margin-right: 4px;
+        .tags {
+            display: none;
+        }
+        .municipality {
+            line-height: 1.2;
+        }
+        .item-content {
+            width: 50%;
+            float: left;
+            margin-bottom: 3px;
+        }
+        .col-35,
+        .col-65 {
+            width: 100% !important;
+        }
+        .img-wrapper {
+            min-height: 160px;
+            margin-left: -6px;
+            margin-right: -6px !important;
+            margin-top: -6px;
+        }
+        .card {
+            margin: 3px 4px;
+            width: 100%;
+            overflow: hidden;
+            h3 {
+                margin: 8px 0;
+            }
+            .distance-wrapper {
+                font-size: 10px;
+                color: #fff;
+                position: absolute;
+                background-color: rgba(0,0,0,0.6);
+                border-radius: 4px;
+                padding: 2px 5px;
+                top: 3px;
+                right: 3px;
+                .material-icons,
+                &:empty {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.distance .material-icons {
+    position: relative;
+    top: 4px;
+    font-size: 18px;
+}
+
+.photo-browser-container .card {
+    margin: 8px 0 !important;
+}
