@@ -1,4 +1,4 @@
-var CONFIG = {
+const CONFIG = {
     swipeBackPage: false,
     init: true,
     statusbar: {

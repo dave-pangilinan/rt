@@ -860,3 +860,22 @@ var createSortBy = function(listType) {
         g_gridLayout.arrange();
     }
 }
+
+/*****************************************************
+ Convert urls to use server path instead of local.
+ *****************************************************/
+var useServerUrl = function() {
+    $$('[data-use-server]').each(function() {
+        let attr = '';
+        if ($$(this).attr('src')) {
+            attr = 'src';
+        } else if ($$(this).attr('href')) {
+            attr = 'href';
+        }
+
+        let url = $$(this).attr(attr); 
+        if (attr != '' && !url.startsWith('http')) {
+            $$(this).attr(attr, RTG.server + 'assets/' + encodeURI(url));
+        }
+    });
+}

@@ -141,6 +141,9 @@ $$('#has-update .update').click(function(e) {
 
 $$(document).on('page:init', function (e, page) {
     log('page init: ' + page.name);
+
+    useServerUrl();
+
     if (page.name == 'home') {
         Home();
     } else if (page.name == 'romblon') {

@@ -77,8 +77,8 @@ var RomblonEvents = function() {
     // Photobrowser for TonTon.
     var photoBrowserTonTon = app.photoBrowser.create({
         photos: [
-            'images/tonton1.jpg',
-            'images/tonton2.jpg'
+            RTG.server + 'assets/images/events/tonton1.jpg',
+            RTG.server + 'assets/images/events/tonton2.jpg'
         ],
         theme: 'dark',
         type: 'popup'
@@ -91,14 +91,14 @@ var RomblonEvents = function() {
     // Photobrowser for Biniray.
     var photoBrowserBiniray = app.photoBrowser.create({
         photos: [
-            'images/biniray1.jpg',
-            'images/biniray2.jpg',
-            'images/biniray3.jpg',
-            'images/biniray4.jpg',
-            'images/biniray5.jpg',
-            'images/biniray6.jpg',
-            'images/biniray7.jpg',
-            'images/biniray8.jpg'
+            RTG.server + 'assets/images/events/biniray1.jpg',
+            RTG.server + 'assets/images/events/biniray2.jpg',
+            RTG.server + 'assets/images/events/biniray3.jpg',
+            RTG.server + 'assets/images/events/biniray4.jpg',
+            RTG.server + 'assets/images/events/biniray5.jpg',
+            RTG.server + 'assets/images/events/biniray6.jpg',
+            RTG.server + 'assets/images/events/biniray7.jpg',
+            RTG.server + 'assets/images/events/biniray8.jpg'
         ],
         theme: 'dark',
         type: 'popup'
@@ -111,10 +111,10 @@ var RomblonEvents = function() {
     // Photobrowser for Marble.
     var photoBrowserMarble = app.photoBrowser.create({
         photos: [
-            'images/marble1.jpg',
-            'images/marble2.jpg',
-            'images/marble3.jpg',
-            'images/marble4.jpg'
+            RTG.server + 'assets/images/events/marble1.jpg',
+            RTG.server + 'assets/images/events/marble2.jpg',
+            RTG.server + 'assets/images/events/marble3.jpg',
+            RTG.server + 'assets/images/events/marble4.jpg'
         ],
         theme: 'dark',
         type: 'popup'
@@ -127,7 +127,7 @@ var RomblonEvents = function() {
     // Photobrowser for Kanidugan.
     var photoBrowserKanidugan = app.photoBrowser.create({
         photos: [
-            'images/kanidugan.jpg'
+            RTG.server + 'assets/images/events/kanidugan.jpg'
         ],
         theme: 'dark',
         type: 'popup'

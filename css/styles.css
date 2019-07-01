@@ -285,6 +285,7 @@ h3.sub {
   height: 260px;
   width: 100%;
   border-radius: 0;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 500px) {
@@ -750,10 +751,6 @@ ol.numbered-small li {
   border-radius: 10px;
 }
 
-.page-home .islands.style-2 .img-wrapper img {
-  display: none;
-}
-
 .page-home .islands.style-2 .button {
   border-radius: 0;
   background-color: #fff;
@@ -790,13 +787,6 @@ ol.numbered-small li {
   overflow: hidden;
   background-size: cover;
   background-repeat: none;
-}
-
-#near-attractions-wrapper .img-wrapper img,
-#near-accommodations-wrapper .img-wrapper img,
-#near-dining-wrapper .img-wrapper img,
-.islands.style-2 .img-wrapper img {
-  display: none;
 }
 
 #near-attractions-wrapper .button,
