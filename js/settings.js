@@ -46,6 +46,20 @@ var TEMPLATE = {
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
+                                        '<div class="stars-outer" data-rating="{{rating}}">' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<div class="stars-inner">' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                            '</div>' +
+                                        '</div>' +
                                         '<div class="municipality">{{location}}</div>' +
                                         '<div class="tags">' +
                                             '{{if tags}}' +
@@ -94,6 +108,20 @@ var TEMPLATE = {
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
+                                        '<div class="stars-outer" data-rating="{{rating}}">' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<div class="stars-inner">' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                            '</div>' +
+                                        '</div>' +
                                         '<div class="municipality">{{location}}</div>' +
                                         '<div class="tags">' +
                                             '{{if tags}}' +
@@ -142,6 +170,20 @@ var TEMPLATE = {
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
+                                        '<div class="stars-outer" data-rating="{{rating}}">' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<div class="stars-inner">' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                            '</div>' +
+                                        '</div>' +
                                         '<div class="municipality">{{location}}</div>' +
                                         '<div class="tags">' +
                                             '{{if tags}}' +
@@ -193,6 +235,20 @@ var TEMPLATE = {
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
+                                        '<div class="stars-outer" data-rating="{{rating}}">' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<div class="stars-inner">' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                            '</div>' +
+                                        '</div>' +
                                         '<div class="municipality">{{location}}</div>' +
                                         '<div class="tags">' +
                                             '{{if tags}}' +
@@ -241,6 +297,20 @@ var TEMPLATE = {
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
+                                        '<div class="stars-outer" data-rating="{{rating}}">' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<div class="stars-inner">' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                            '</div>' +
+                                        '</div>' +
                                         '<div class="municipality">{{location}}</div>' +
                                         '<div class="tags">' +
                                             '{{if tags}}' +
@@ -289,6 +359,20 @@ var TEMPLATE = {
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
+                                        '<div class="stars-outer" data-rating="{{rating}}">' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<div class="stars-inner">' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                            '</div>' +
+                                        '</div>' +
                                         '<div class="municipality">{{location}}</div>' +
                                         '<div class="tags">' +
                                             '{{if tags}}' +
@@ -339,6 +423,20 @@ var TEMPLATE = {
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
+                                        '<div class="stars-outer" data-rating="{{rating}}">' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<div class="stars-inner">' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                            '</div>' +
+                                        '</div>' +
                                         '<div class="municipality">{{location}}</div>' +
                                         '<div class="tags">' +
                                             '{{if tags}}' +
@@ -387,6 +485,20 @@ var TEMPLATE = {
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
+                                        '<div class="stars-outer" data-rating="{{rating}}">' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<div class="stars-inner">' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                            '</div>' +
+                                        '</div>' +
                                         '<div class="municipality">{{location}}</div>' +
                                         '<div class="tags">' +
                                             '{{if tags}}' +
@@ -435,6 +547,20 @@ var TEMPLATE = {
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
+                                        '<div class="stars-outer" data-rating="{{rating}}">' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<div class="stars-inner">' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                            '</div>' +
+                                        '</div>' +
                                         '<div class="municipality">{{location}}</div>' +
                                         '<div class="tags">' +
                                             '{{if tags}}' +
@@ -485,6 +611,20 @@ var TEMPLATE = {
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
+                                        '<div class="stars-outer" data-rating="{{rating}}">' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<div class="stars-inner">' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                            '</div>' +
+                                        '</div>' +
                                         '<div class="municipality">{{location}}</div>' +
                                         '<div class="tags">' +
                                             '{{if tags}}' +
@@ -533,6 +673,20 @@ var TEMPLATE = {
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
+                                        '<div class="stars-outer" data-rating="{{rating}}">' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<div class="stars-inner">' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                            '</div>' +
+                                        '</div>' +
                                         '<div class="municipality">{{location}}</div>' +
                                         '<div class="tags">' +
                                             '{{if tags}}' +
@@ -581,6 +735,20 @@ var TEMPLATE = {
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
+                                        '<div class="stars-outer" data-rating="{{rating}}">' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<div class="stars-inner">' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                            '</div>' +
+                                        '</div>' +
                                         '<div class="municipality">{{location}}</div>' +
                                         '<div class="tags">' +
                                             '{{if tags}}' +
@@ -631,6 +799,20 @@ var TEMPLATE = {
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
+                                        '<div class="stars-outer" data-rating="{{rating}}">' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<div class="stars-inner">' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                            '</div>' +
+                                        '</div>' +
                                         '<div class="municipality">{{location}}</div>' +
                                         '<div class="tags">' +
                                             '{{if tags}}' +
@@ -679,6 +861,20 @@ var TEMPLATE = {
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
+                                        '<div class="stars-outer" data-rating="{{rating}}">' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<div class="stars-inner">' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                            '</div>' +
+                                        '</div>' +
                                         '<div class="municipality">{{location}}</div>' +
                                         '<div class="tags">' +
                                             '{{if tags}}' +
@@ -727,6 +923,20 @@ var TEMPLATE = {
                                     '</div>' +
                                     '<div class="col-65 item-summary">' +
                                         '<h3>{{title}}</h3>' +
+                                        '<div class="stars-outer" data-rating="{{rating}}">' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<i class="material-icons">star_border</i>' +
+                                            '<div class="stars-inner">' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                                '<div class="material-icons">star</div>' +
+                                            '</div>' +
+                                        '</div>' +
                                         '<div class="municipality">{{location}}</div>' +
                                         '<div class="tags">' +
                                             '{{if tags}}' +

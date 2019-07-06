@@ -78,6 +78,28 @@ small {
     &.no-margin {
         border-radius: 0;
     }
+    
+    .stars-outer {
+        display: inline-block;
+        position: relative;
+
+        .material-icons {
+            font-size: 14px;
+            width: 14px;
+            height: 14px;
+            color: #f8ce0b;
+        }
+    }
+    
+    .stars-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0;
+    }
+
 }
 
 .spacer {

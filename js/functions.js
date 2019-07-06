@@ -751,6 +751,15 @@ var convertListToGrid = function() {
     $$('.sort-by .button').on('click', function () {
         createSortBy();
     });
+
+    // Show rating.
+    $$('[data-rating]').each(function() {
+        log('calculating..')
+        const rating = $$(this).data('rating');
+        let percentage = parseFloat(rating) / 5 * 100;
+        log('percentage: ' + percentage)
+        $$(this).find('.stars-inner').css('width', percentage + '%');
+    });
 }
 
 /*****************************************************

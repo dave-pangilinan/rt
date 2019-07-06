@@ -97,6 +97,27 @@ small {
   border-radius: 0;
 }
 
+.card .stars-outer {
+  display: inline-block;
+  position: relative;
+}
+
+.card .stars-outer .material-icons {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+  color: #f8ce0b;
+}
+
+.card .stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
 .spacer {
   height: 60px;
 }
@@ -1020,7 +1041,7 @@ ol.numbered-small li {
 }
 
 .searchbar-result ul .card h3 {
-  margin: 8px 0;
+  margin: 8px 0 2px;
 }
 
 .searchbar-result ul .card .distance-wrapper {
