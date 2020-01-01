@@ -73,7 +73,7 @@ small {
 }
 
 .card {
-    border-radius: 10px;
+    border-radius: 5px;
 
     &.no-margin {
         border-radius: 0;
@@ -120,7 +120,7 @@ img.responsive {
     max-width: 100%;
     height: auto;
     display: block;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .landscape-wrapper {
@@ -303,7 +303,7 @@ h3 {
     }
 
     .button {        
-        border-radius: 10px;
+        border-radius: 5px;
         display: inline-block;
         padding: 0px 30px;
         color: #fff;
@@ -637,7 +637,7 @@ ol.numbered-small li {
 .md .button,
 .md .button.button-big, 
 .md .button.button-big-md {
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 @media (max-width: 500px) {

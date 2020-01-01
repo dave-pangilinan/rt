@@ -90,7 +90,7 @@ small {
 }
 
 .card {
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .card.no-margin {
@@ -139,7 +139,7 @@ img.responsive {
   max-width: 100%;
   height: auto;
   display: block;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .landscape-wrapper {
@@ -188,9 +188,6 @@ img.responsive {
 .darken img {
   display: block;
   -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
   opacity: .7;
 }
@@ -306,7 +303,8 @@ h3.sub {
   height: 260px;
   width: 100%;
   border-radius: 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (min-width: 500px) {
@@ -345,7 +343,7 @@ h3.sub {
 }
 
 .banner-wrapper .button {
-  border-radius: 10px;
+  border-radius: 5px;
   display: inline-block;
   padding: 0px 30px;
   color: #fff;
@@ -688,7 +686,10 @@ ol.numbered-small li {
 }
 
 .item-content {
+  -webkit-transition: background 0.4s, -webkit-box-shadow 0.4s;
+  transition: background 0.4s, -webkit-box-shadow 0.4s;
   transition: background 0.4s, box-shadow 0.4s;
+  transition: background 0.4s, box-shadow 0.4s, -webkit-box-shadow 0.4s;
 }
 
 .md .subnavbar .searchbar input[type=search] {
@@ -698,7 +699,7 @@ ol.numbered-small li {
 .md .button,
 .md .button.button-big,
 .md .button.button-big-md {
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 @media (max-width: 500px) {
@@ -769,7 +770,7 @@ ol.numbered-small li {
   overflow: hidden;
   background-size: cover;
   background-repeat: none;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .page-home .islands.style-2 .button {
@@ -1122,3 +1123,4 @@ ol.numbered-small li {
   font-weight: 700;
   width: 65px;
 }
+/*# sourceMappingURL=styles.css.map */
