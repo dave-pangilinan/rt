@@ -654,3 +654,24 @@ ol.numbered-small li {
     }
 }
 
+.fb-login {
+    padding: 10px;
+
+    .button {
+        text-transform: none;
+        text-align: left;
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
+        position: relative;
+        top: 4px;
+        margin-right: 18px;
+        margin-left: 6px;
+        > g {
+            fill: #fff;
+        }
+    }
+}
+
